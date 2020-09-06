@@ -95,9 +95,9 @@ class helper_plugin_avatar extends DokuWiki_Plugin {
       // do not pass invalid or empty emails to gravatar site...
       if (mail_isvalid($mail)){
           if (is_ssl()) {
-              $src = 'https://secure.gravatar.com/';
+              $src = 'https://secure.libravatar.org/';
           } else {
-              $src = 'http://www.gravatar.com/';
+              $src = 'http://www.libravatar.org/';
           }
           $src .= 'avatar/'.$seed.'?s='.$size.'&d='.$this->getConf('default').'&r='.$this->getConf('rating').'&.jpg';
           $src = ml($src);
